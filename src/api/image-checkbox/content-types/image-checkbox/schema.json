@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_checkboxes",
+  "info": {
+    "singularName": "image-checkbox",
+    "pluralName": "image-checkboxes",
+    "displayName": "image_checkbox",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "checkbox": {
+      "type": "boolean"
+    },
+    "image_id": {
+      "type": "integer"
+    }
+  }
+}

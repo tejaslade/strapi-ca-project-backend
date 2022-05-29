@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service_name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "feed"
+      ],
+      "required": true
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feed_forms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feed-form.feed-form",
+      "mappedBy": "service"
+    },
+    "images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image.image",
+      "mappedBy": "service"
+    },
+    "service_cateogory": {
+      "type": "enumeration",
+      "enum": [
+        "Accounting ",
+        "Audit",
+        "Feedform "
+      ],
+      "default": "Feedform ",
+      "required": true
+    }
+  }
+}
